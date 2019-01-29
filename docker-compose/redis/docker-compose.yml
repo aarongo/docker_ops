@@ -1,23 +1,13 @@
 version: "3"
 
 services:
-  nginx:
-    image: nexus3/nginx:latest
+  redis:
+    image: redis:latest
     ports:
-      - "80:80"
-      - "443:443"
-    container_name: nginx-server
+      - "6379:6379"
+    container_name: redis-server
     volumes:
-      - nginx-data:/data/nginx
-    links:
-      - nexus
-  nexus:
-    image: sonatype/nexus3:latest
-    volumes:
-      - nexus-data:/nexus-data
-    container_name: nexus-server
+      - redis-data:/data
 volumes:
   nexus-data:
-    external: true
-  nginx-data:
     external: true
