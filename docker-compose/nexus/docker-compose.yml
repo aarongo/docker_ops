@@ -2,7 +2,7 @@ version: "3"
 
 services:
   nginx:
-    image: nexus3/nginx:1.14.2
+    image: nexus3/nginx:latest
     ports:
       - "80:80"
       - "443:443"
