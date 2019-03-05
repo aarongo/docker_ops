@@ -9,5 +9,5 @@ services:
     volumes:
       - redis-data:/data
 volumes:
-  nexus-data:
+  redis-data:
     external: true
