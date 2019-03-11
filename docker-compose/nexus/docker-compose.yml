@@ -19,7 +19,7 @@ services:
       - nexus-data:/nexus-data
     container_name: nexus-server
     environment:
-      INSTALL4J_ADD_VM_PARAMS: "-Xms2g -Xmx2g -XX:MaxDirectMemorySize=3g  -Djava.util.prefs.userRoot=${NEXUS_DATA}/javaprefs"
+      INSTALL4J_ADD_VM_PARAMS: "-Xms1g -Xmx1g -XX:MaxDirectMemorySize=2g  -Djava.util.prefs.userRoot=${NEXUS_DATA}/javaprefs"
 volumes:
   nexus-data:
     external: true
